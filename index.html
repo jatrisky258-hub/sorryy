@@ -1,309 +1,33 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For My Favourite Person 💗</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Pacifico&display=swap');
+<div id="letter" class="letter hidden">
+  <h2>Sorryyy Jaanu 🥺💗</h2>
 
-:root {
-  --pink: #ff6f91;
-  --deep: #a83262;
-  --cream: #fff8f5;
-  --purple: #b9a1ff;
-}
+  <p>
+    Sooryy jaanu 🥺❤️
+    Maine aapke aage nahi bola tha thappad maar dunga,
+    phir bhi meri baat se aap hurt hui,
+    uske liye sorry babyy 🥺💗
+  </p>
 
-* { box-sizing: border-box; }
+  <p>
+    Sorryyy babyy, baat kar lo na please 🥹💕
+    Main bina bataye so gaya, mujhe aapko batakar sona chahiye tha.
+    Sorry meri jaan 😭❤️
+  </p>
 
-body {
-  margin: 0;
-  min-height: 100vh;
-  font-family: 'Nunito', sans-serif;
-  color: #60354d;
-  background: linear-gradient(135deg, #ffe0eb, #fff2e5, #e8dcff);
-  overflow-x: hidden;
-}
+  <p>
+    Aap mere liye bahut special ho, jaanu.
+    Main aapki feelings ki respect karunga
+    aur apni baaton ka dhyaan rakhunga. 🫶
+  </p>
 
-button { font: inherit; cursor: pointer; }
+  <p>
+    Jab aapka mann kare tab baat kar lena babyy.
+    Aapko time chahiye toh main wait karunga. 💌
+  </p>
 
-.hearts {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 0;
-}
-
-.heart {
-  position: absolute;
-  bottom: -40px;
-  animation: floatUp linear forwards;
-  opacity: .7;
-}
-
-@keyframes floatUp {
-  to { transform: translateY(-110vh) rotate(35deg); opacity: 0; }
-}
-
-main {
-  width: min(680px, 92%);
-  margin: 35px auto;
-  position: relative;
-  z-index: 1;
-}
-
-.card {
-  background: rgba(255,255,255,.86);
-  backdrop-filter: blur(12px);
-  border: 2px solid white;
-  border-radius: 28px;
-  padding: 28px;
-  margin-bottom: 20px;
-  box-shadow: 0 15px 40px #b45e7620;
-  text-align: center;
-}
-
-h1 {
-  font-family: 'Pacifico', cursive;
-  font-size: clamp(28px, 6vw, 43px);
-  color: var(--deep);
-  margin: 12px 0;
-}
-
-h2 { color: var(--deep); }
-
-.hero-emoji { font-size: 66px; animation: bounce 2s infinite; }
-
-@keyframes bounce {
-  50% { transform: translateY(-8px) rotate(3deg); }
-}
-
-p { line-height: 1.8; }
-
-.btn {
-  border: none;
-  border-radius: 30px;
-  background: linear-gradient(135deg, #ff7599, #d75a99);
-  color: white;
-  padding: 13px 22px;
-  margin: 5px;
-  box-shadow: 0 5px 15px #ff759940;
-  transition: .2s;
-}
-
-.btn:hover { transform: translateY(-3px) scale(1.02); }
-
-.btn.secondary {
-  background: #fff0f5;
-  color: var(--deep);
-  border: 1px solid #ffc6da;
-  box-shadow: none;
-}
-
-.hidden { display: none; }
-
-.letter {
-  background: #fff5f8;
-  border: 1px dashed #f6a5c0;
-  border-radius: 18px;
-  padding: 20px;
-  margin-top: 18px;
-  text-align: left;
-  animation: appear .5s ease;
-}
-
-@keyframes appear {
-  from { opacity: 0; transform: translateY(12px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.big { font-size: 35px; }
-
-#compliment { color: #a83262; font-weight: 800; min-height: 55px; }
-
-.mood {
-  display: inline-block;
-  border: 1px solid #f2bfd0;
-  border-radius: 20px;
-  background: white;
-  color: #713b59;
-  padding: 10px 14px;
-  margin: 4px;
-}
-
-.mood:hover, .mood:focus { background: #ffe2ec; }
-
-footer { text-align: center; padding: 10px 0 30px; }
-.small { font-size: 13px; opacity: .75; }
-
-</style>
-</head>
-<body>
-
-<div class="hearts" id="hearts"></div>
-
-<main>
-  <section class="card">
-    <div class="hero-emoji">🧸💗</div>
-    <p>For the girl who means so much to me...</p>
-    <h1>Hey, Meri Jaan! 🥺</h1>
-    <p>
-      Aaj tumhare smile ke liye ek chhoti si website banayi hai.
-      Lekin iske peeche ek sachcha sorry bhi hai.
-    </p>
-    <button class="btn" onclick="openLetter()">
-      Open your little surprise 💌
-    </button>
-
-    <div id="letter" class="letter hidden">
-      <h2>Dear Meri Favourite Person 💗</h2>
-      <p>
-        Mujhe sorry hai ki main bina bataye so gaya.
-        Mujhe samajhna chahiye tha ki tumhe bura lag sakta hai.
-      </p>
-      <p>
-        Aur jo maine gusse ya mazaak mein thappad maarne ki baat
-        boli, woh galat thi. Tumhe aisa feel karwana ki tum mujhse
-        daro, bilkul theek nahi hai. Main us baat ki responsibility
-        leta hoon. Mera intention kuch bhi raha ho, tumhe hurt hua
-        aur uske liye I am genuinely sorry.
-      </p>
-      <p>
-        Main apni awaaz aur apne words par dhyaan dunga.
-        Tumse pyaar karne ka matlab tumhari feelings aur safety
-        ki respect karna bhi hai. Sirf promise nahi, apne actions
-        se better banne ki koshish karunga.
-      </p>
-      <p>
-        Tumhe abhi hi mujhe forgive karna zaroori nahi.
-        Agar tumhe time chahiye, main respect karunga.
-        Jab tum ready ho, main tumhari baat dhyaan se sunna chahta hoon.
-      </p>
-      <p style="text-align:right">
-        Dil se sorry,<br>
-        Tumhara ❤️
-      </p>
-    </div>
-  </section>
-
-  <section class="card">
-    <div class="big">🌷✨🌷</div>
-    <h2>Ek chhoti si baat...</h2>
-    <p>
-      Tumhari feelings important hain—even jab hum dono
-      ek doosre se agree nahi karte.
-    </p>
-    <p id="compliment">Tumhari smile apne aap mein ek sunshine hai ☀️</p>
-    <button class="btn secondary" onclick="newCompliment()">
-      Ek aur cute note 🥹
-    </button>
-  </section>
-
-  <section class="card">
-    <div class="big">💌</div>
-    <h2>Abhi tum kaisa feel kar rahi ho?</h2>
-    <p>Koi bhi feeling galat nahi hai. Jo feel ho, woh choose kar sakti ho.</p>
-
-    <button class="mood" onclick="chooseMood('hurt')">🥺 Abhi hurt hoon</button>
-    <button class="mood" onclick="chooseMood('time')">🌷 Mujhe time chahiye</button>
-    <button class="mood" onclick="chooseMood('talk')">💗 Baat karni hai</button>
-    <button class="mood" onclick="chooseMood('smile')">🧸 Thoda smile aaya</button>
-
-    <div id="moodReply" class="letter hidden" aria-live="polite"></div>
-  </section>
-
-  <section class="card">
-    <div class="big">🫶</div>
-    <h2>My little promise</h2>
-    <p>
-      No scary words. No shouting to win.
-      More listening, more patience, more respect.
-    </p>
-    <p>
-      <b>Hum dono ek team ho sakte hain,
-      bina kisi ko dare ya hurt hue. ❤️</b>
-    </p>
-    <button class="btn" onclick="makeHearts()">
-      Send a little love 💕
-    </button>
-    <p class="small">No pressure to reply. Take your time, jaan.</p>
-  </section>
-
-  <footer>
-    Made with 💗, a little code & a sincere apology.
-    <br><span class="small">One step at a time. 🌙</span>
-  </footer>
-</main>
-
-<script>
-function openLetter() {
-  const letter = document.getElementById('letter');
-  letter.classList.toggle('hidden');
-
-  if (!letter.classList.contains('hidden')) {
-    letter.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    makeHearts();
-  }
-}
-
-const compliments = [
-  "Tumhari smile apne aap mein ek sunshine hai ☀️",
-  "Tumhari baatein mere din ko special bana deti hain 🌷",
-  "Tumhari feelings sunna aur samajhna mere liye important hai 💗",
-  "Tum apni jagah bahut special ho, jaan 🧸",
-  "Tumhe respect aur sukoon feel hona chahiye 🫶",
-  "Tumhari khushi ke saath tumhara comfort bhi important hai 🌸"
-];
-
-let lastNote = -1;
-
-function newCompliment() {
-  let next;
-  do {
-    next = Math.floor(Math.random() * compliments.length);
-  } while (next === lastNote && compliments.length > 1);
-
-  lastNote = next;
-  document.getElementById('compliment').textContent = compliments[next];
-}
-
-const replies = {
-  hurt: "I understand, jaan. Tum hurt ho aur main us feeling ko dismiss nahi karunga. Main sunne ke liye ready hoon. 💗",
-  time: "Bilkul, apna time lo. Main tumhe reply ya forgive karne ke liye pressure nahi dunga. 🌷",
-  talk: "Jab tum comfortable ho, hum calmly baat karenge. Pehle main tumhari baat sununga, bina interrupt kiye. 🫶",
-  smile: "Agar thodi si smile aayi, toh I'm glad. Par meri apology sirf tumhe hasane ke liye nahi—main genuinely better karna chahta hoon. 🧸"
-};
-
-function chooseMood(mood) {
-  const box = document.getElementById('moodReply');
-  box.textContent = replies[mood];
-  box.classList.remove('hidden');
-  box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-}
-
-function makeHearts() {
-  const container = document.getElementById('hearts');
-
-  for (let i = 0; i < 22; i++) {
-    const heart = document.createElement('span');
-    heart.className = 'heart';
-    heart.textContent = ['💗', '💕', '💖', '🌸', '✨'][
-      Math.floor(Math.random() * 5)
-    ];
-
-    heart.style.left = Math.random() * 100 + 'vw';
-    heart.style.fontSize = (15 + Math.random() * 20) + 'px';
-    heart.style.animationDuration = (3 + Math.random() * 4) + 's';
-
-    container.appendChild(heart);
-    heart.addEventListener('animationend', () => heart.remove());
-  }
-}
-
-// A few gentle floating hearts when the page opens.
-makeHearts();
-</script>
-</body>
-</html>
+  <p style="text-align:right">
+    Sooryyy meri jaanu 🧸💗<br>
+    Aapka ❤️
+  </p>
+</div>
