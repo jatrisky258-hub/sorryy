@@ -4,17 +4,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For My Favourite Person 💗</title>
+<title>Sorryy Baby 💗</title>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Pacifico&display=swap');
-
-:root {
-  --pink: #ff6f91;
-  --deep: #a83262;
-  --cream: #fff8f5;
-  --purple: #b9a1ff;
-}
 
 * { box-sizing: border-box; }
 
@@ -27,7 +20,10 @@ body {
   overflow-x: hidden;
 }
 
-button { font: inherit; cursor: pointer; }
+button {
+  font: inherit;
+  cursor: pointer;
+}
 
 .hearts {
   position: fixed;
@@ -41,7 +37,7 @@ button { font: inherit; cursor: pointer; }
   position: absolute;
   bottom: -40px;
   animation: floatUp linear forwards;
-  opacity: .7;
+  opacity: .8;
 }
 
 @keyframes floatUp {
@@ -59,7 +55,7 @@ main {
 }
 
 .card {
-  background: rgba(255,255,255,.86);
+  background: rgba(255,255,255,.88);
   backdrop-filter: blur(12px);
   border: 2px solid white;
   border-radius: 28px;
@@ -71,15 +67,15 @@ main {
 
 h1 {
   font-family: 'Pacifico', cursive;
-  font-size: clamp(28px, 6vw, 43px);
-  color: var(--deep);
-  margin: 12px 0;
+  font-size: clamp(30px, 7vw, 46px);
+  color: #a83262;
+  margin: 14px 0;
 }
 
-h2 { color: var(--deep); }
+h2 { color: #a83262; }
 
-.hero-emoji {
-  font-size: 66px;
+.hero {
+  font-size: 68px;
   animation: bounce 2s infinite;
 }
 
@@ -101,53 +97,65 @@ p { line-height: 1.8; }
 }
 
 .btn:hover {
-  transform: translateY(-3px) scale(1.02);
+  transform: translateY(-3px) scale(1.03);
 }
 
-.btn.secondary {
+.secondary {
   background: #fff0f5;
-  color: var(--deep);
+  color: #a83262;
   border: 1px solid #ffc6da;
   box-shadow: none;
 }
 
 .hidden { display: none; }
 
-.letter {
+.moment {
   background: #fff5f8;
   border: 1px dashed #f6a5c0;
   border-radius: 18px;
   padding: 20px;
   margin-top: 18px;
-  text-align: left;
-  animation: appear .5s ease;
+  animation: appear .4s ease;
 }
 
 @keyframes appear {
-  from { opacity: 0; transform: translateY(12px); }
+  from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-.big { font-size: 35px; }
+.big { font-size: 38px; }
 
-#compliment {
+#cuteText {
   color: #a83262;
+  font-size: 18px;
   font-weight: 800;
   min-height: 55px;
 }
 
-.mood {
-  display: inline-block;
-  border: 1px solid #f2bfd0;
-  border-radius: 20px;
-  background: white;
-  color: #713b59;
-  padding: 10px 14px;
-  margin: 4px;
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 18px;
 }
 
-.mood:hover, .mood:focus {
-  background: #ffe2ec;
+.photo {
+  background: #fff0f5;
+  border-radius: 18px;
+  padding: 20px 8px;
+  border: 1px solid #ffd2e0;
+  transition: .2s;
+}
+
+.photo:hover {
+  transform: translateY(-4px);
+  background: #ffe5ef;
+}
+
+.photo span {
+  display: block;
+  font-size: 35px;
+  margin-bottom: 8px;
 }
 
 footer {
@@ -168,209 +176,174 @@ footer {
 
 <main>
 
-  <!-- FIRST PAGE -->
+  <!-- Welcome -->
   <section class="card">
-    <div class="hero-emoji">🧸💗</div>
+    <div class="hero">🧸💗</div>
+
+    <h1>Sorryy Baby 🥺</h1>
 
     <p>
-      Aaj aapki smile ke liye ek chhoti si website banayi hai.
-      Lekin iske peeche ek sachcha sorry bhi hai.
+      Meri pyaari si jaanu ke liye ek chhota sa surprise 💕
     </p>
-
-    <h1>Hey, Meri Jaan! 🥺</h1>
 
     <p>
-      Aaj tumhare smile ke liye ek chhoti si website banayi hai.
-      Lekin iske peeche ek sachcha sorry bhi hai.
+      <b>Sorryy baby, maan jaoo naaa 🥹💗</b>
     </p>
 
-    <button class="btn" onclick="openLetter()">
-      Open your little surprise 💌
+    <button class="btn" onclick="showSurprise()">
+      Aapke liye ek surprise 💌
     </button>
 
-    <div id="letter" class="letter hidden">
-      <h2>Dear Meri Favourite Person 💗</h2>
-
+    <div id="surprise" class="moment hidden">
+      <div class="big">🥹🫶💗</div>
+      <h2>I Love You, Baby!</h2>
       <p>
-        Mujhe sorry hai ki main bina bataye so gaya.
-        Mujhe samajhna chahiye tha ki tumhe bura lag sakta hai.
+        Sorryy jaanu, main bina bataye so gaya.
+        Aap mujhse baat kar lo naaa, pleaseee 🥺💕
       </p>
-
       <p>
-        Aur jo maine gusse ya mazaak mein thappad maarne ki baat
-        boli, woh galat thi. Tumhe aisa feel karwana ki tum mujhse
-        daro, bilkul theek nahi hai. Main us baat ki responsibility
-        leta hoon. Mera intention kuch bhi raha ho, tumhe hurt hua
-        aur uske liye I am genuinely sorry.
-      </p>
-
-      <p>
-        Main apni awaaz aur apne words par dhyaan dunga.
-        Tumse pyaar karne ka matlab tumhari feelings aur safety
-        ki respect karna bhi hai. Sirf promise nahi, apne actions
-        se better banne ki koshish karunga.
-      </p>
-
-      <p>
-        Tumhe abhi hi mujhe forgive karna zaroori nahi.
-        Agar tumhe time chahiye, main respect karunga.
-        Jab tum ready ho, main tumhari baat dhyaan se sunna chahta hoon.
-      </p>
-
-      <p style="text-align:right">
-        Dil se sorry,<br>
-        Tumhara ❤️
+        Aap mere liye bahut special ho, babyy. ❤️
       </p>
     </div>
   </section>
 
-  <!-- CUTE COMPLIMENTS -->
+  <!-- Cute moments -->
   <section class="card">
-    <div class="big">🌷✨🌷</div>
-    <h2>Ek chhoti si baat...</h2>
+    <div class="big">🌷✨</div>
+    <h2>Our Little Moments 💗</h2>
+    <p>Chhoti-chhoti baatein, pyaari-pyaari memories 🧸</p>
 
-    <p>
-      Tumhari feelings important hain—even jab hum dono
-      ek doosre se agree nahi karte.
-    </p>
+    <div class="photo-grid">
+      <div class="photo" onclick="showMoment(0)">
+        <span>🥹</span>
+        Cute Talks
+      </div>
 
-    <p id="compliment">
-      Tumhari smile apne aap mein ek sunshine hai ☀️
-    </p>
+      <div class="photo" onclick="showMoment(1)">
+        <span>🤭</span>
+        Silly Fights
+      </div>
 
-    <button class="btn secondary" onclick="newCompliment()">
-      Ek aur cute note 🥹
-    </button>
+      <div class="photo" onclick="showMoment(2)">
+        <span>🌙</span>
+        Good Nights
+      </div>
+
+      <div class="photo" onclick="showMoment(3)">
+        <span>🫶</span>
+        Together
+      </div>
+    </div>
+
+    <div id="momentText" class="moment hidden"></div>
   </section>
 
-  <!-- MOOD SELECTOR -->
+  <!-- Sweet notes -->
   <section class="card">
     <div class="big">💌</div>
-    <h2>Abhi tum kaisa feel kar rahi ho?</h2>
+    <h2>A Little Note For You</h2>
 
-    <p>
-      Koi bhi feeling galat nahi hai.
-      Jo feel ho, woh choose kar sakti ho.
+    <p id="cuteText">
+      Aapki smile meri favourite hai 🌸
     </p>
 
-    <button class="mood" onclick="chooseMood('hurt')">
-      🥺 Abhi hurt hoon
+    <button class="btn secondary" onclick="newNote()">
+      Next cute note 🎀
     </button>
-
-    <button class="mood" onclick="chooseMood('time')">
-      🌷 Mujhe time chahiye
-    </button>
-
-    <button class="mood" onclick="chooseMood('talk')">
-      💗 Baat karni hai
-    </button>
-
-    <button class="mood" onclick="chooseMood('smile')">
-      🧸 Thoda smile aaya
-    </button>
-
-    <div id="moodReply" class="letter hidden"
-         aria-live="polite"></div>
   </section>
 
-  <!-- LITTLE PROMISE -->
+  <!-- Final surprise -->
   <section class="card">
-    <div class="big">🫶</div>
-    <h2>My little promise</h2>
+    <div class="big">🐻💖</div>
+    <h2>Baby, Ek Hug Le Lo 🤗</h2>
 
     <p>
-      No scary words. No shouting to win.
-      More listening, more patience, more respect.
+      Aapke liye ek virtual hug aur dher saara pyaar 💗
     </p>
 
-    <p>
-      <b>
-        Hum dono ek team ho sakte hain,
-        bina kisi ko dare ya hurt hue. ❤️
-      </b>
-    </p>
-
-    <button class="btn" onclick="makeHearts()">
-      Send a little love 💕
+    <button class="btn" onclick="sendLove()">
+      Tight wala hug 🫂
     </button>
 
-    <p class="small">
-      No pressure to reply. Take your time, jaan.
-    </p>
+    <div id="hug" class="moment hidden">
+      <div class="big">🫂💗✨</div>
+      <h2>Huggg for youuu!</h2>
+      <p>Sorryy baby, maan jaoo naaa 🥹💕</p>
+      <p>Aapki bahut yaad aati hai, jaanu. ❤️</p>
+    </div>
   </section>
 
   <footer>
-    Made with 💗, a little code & a sincere apology.
+    Made with lots of love 💗
     <br>
-    <span class="small">One step at a time. 🌙</span>
+    <span class="small">For my favourite person, always. 🧸</span>
   </footer>
 
 </main>
 
 <script>
-function openLetter() {
-  const letter = document.getElementById('letter');
+function showSurprise() {
+  const box = document.getElementById('surprise');
+  box.classList.toggle('hidden');
 
-  letter.classList.toggle('hidden');
-
-  if (!letter.classList.contains('hidden')) {
-    letter.scrollIntoView({
+  if (!box.classList.contains('hidden')) {
+    box.scrollIntoView({
       behavior: 'smooth',
       block: 'center'
     });
-
     makeHearts();
   }
 }
 
-const compliments = [
-  "Tumhari smile apne aap mein ek sunshine hai ☀️",
-  "Tumhari baatein mere din ko special bana deti hain 🌷",
-  "Tumhari feelings sunna aur samajhna mere liye important hai 💗",
-  "Tum apni jagah bahut special ho, jaanu 🧸",
-  "Tumhe respect aur sukoon feel hona chahiye 🫶",
-  "Tumhari khushi ke saath tumhara comfort bhi important hai 🌸"
+const moments = [
+  "Aapki cute-cute baatein sunna kitna achha lagta hai 🥹💕",
+  "Thodi si nok-jhok, phir pyaar se baat karna 🤭💗",
+  "Aapko good night bolna aur sweet dreams wish karna 🌙✨",
+  "Ek doosre ko samajhna aur saath mein grow karna 🫶🌷"
 ];
 
-let lastNote = -1;
-
-function newCompliment() {
-  let next;
-
-  do {
-    next = Math.floor(Math.random() * compliments.length);
-  } while (next === lastNote && compliments.length > 1);
-
-  lastNote = next;
-
-  document.getElementById('compliment').textContent =
-    compliments[next];
-}
-
-const replies = {
-  hurt:
-    "I understand, jaan. Tum hurt ho aur main us feeling ko dismiss nahi karunga. Main sunne ke liye ready hoon. 💗",
-
-  time:
-    "Bilkul, apna time lo. Main tumhe reply ya forgive karne ke liye pressure nahi dunga. 🌷",
-
-  talk:
-    "Jab tum comfortable ho, hum calmly baat karenge. Pehle main tumhari baat sununga, bina interrupt kiye. 🫶",
-
-  smile:
-    "Agar thodi si smile aayi, toh I'm glad. Par meri apology sirf tumhe hasane ke liye nahi—main genuinely better karna chahta hoon. 🧸"
-};
-
-function chooseMood(mood) {
-  const box = document.getElementById('moodReply');
-
-  box.textContent = replies[mood];
+function showMoment(index) {
+  const box = document.getElementById('momentText');
+  box.textContent = moments[index];
   box.classList.remove('hidden');
-
   box.scrollIntoView({
     behavior: 'smooth',
     block: 'nearest'
   });
+}
+
+const notes = [
+  "Aapki smile meri favourite hai 🌸",
+  "Aap meri favourite notification ho 📱💗",
+  "Aapke saath chhoti si baat bhi special lagti hai 🧸",
+  "Aap hamesha khush raho, meri jaan 🌷",
+  "Aapko ek tight wala hug dene ka mann hai 🫂",
+  "Sorryy baby, maan jaoo naaa 🥹💕",
+  "Aap bahut special ho mere liye ❤️"
+];
+
+let lastNote = -1;
+
+function newNote() {
+  let next;
+
+  do {
+    next = Math.floor(Math.random() * notes.length);
+  } while (next === lastNote);
+
+  lastNote = next;
+
+  document.getElementById('cuteText').textContent = notes[next];
+}
+
+function sendLove() {
+  const hug = document.getElementById('hug');
+  hug.classList.remove('hidden');
+  hug.scrollIntoView({
+    behavior: 'smooth',
+    block: 'center'
+  });
+  makeHearts();
 }
 
 function makeHearts() {
@@ -378,7 +351,6 @@ function makeHearts() {
 
   for (let i = 0; i < 22; i++) {
     const heart = document.createElement('span');
-
     heart.className = 'heart';
 
     heart.textContent = [
@@ -395,7 +367,6 @@ function makeHearts() {
   }
 }
 
-// Gentle floating hearts when the page opens
 makeHearts();
 </script>
 
